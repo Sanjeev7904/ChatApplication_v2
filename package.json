@@ -6,7 +6,8 @@
     "socket.io-client": "^4.8.1"
   },
   "scripts": {
-   "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && npm install && npm start"
+    "start": "cd backend && npm install && npm start",
+    "server": "nodemon backend/server.js",
+    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
   }
 }
